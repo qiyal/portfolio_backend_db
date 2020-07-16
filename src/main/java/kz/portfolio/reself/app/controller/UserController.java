@@ -16,7 +16,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @Autowired
     private JavaMailSender javaMailSender;
 
