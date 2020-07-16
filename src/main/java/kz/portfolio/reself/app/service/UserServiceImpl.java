@@ -44,10 +44,4 @@ public class UserServiceImpl implements UserService{
     public List getAllSkills() {
         return skillRepository.findAll();
     }
-
-    @Override
-    public List getAllProjects() {
-        return projectRepository.findAll();
-    }
-
 }

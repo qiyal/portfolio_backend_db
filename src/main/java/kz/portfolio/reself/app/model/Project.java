@@ -10,6 +10,8 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
+    private String text;
+    private int view;
     private String type;
     private Date date;
     private String urlImage;
@@ -20,6 +22,14 @@ public class Project {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getView() {
+        return view;
     }
 
     public String getType() {

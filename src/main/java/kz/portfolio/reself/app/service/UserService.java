@@ -10,5 +10,4 @@ public interface UserService {
     List getAllEducations();
     List getAllExperience();
     List getAllSkills();
-    List getAllProjects();
 }

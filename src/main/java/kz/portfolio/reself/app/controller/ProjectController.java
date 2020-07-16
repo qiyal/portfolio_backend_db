@@ -63,4 +63,31 @@ public class ProjectController {
         }
     }
 
+    @GetMapping("/projects/most-like")
+    public ResponseEntity<Map<String, Object>> getMostLike(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "9") int size
+    ) {
+
+        try {
+            List<Project> projects = new ArrayList<Project>();
+            Pageable paging = PageRequest.of(page, size, Sort.by("view").descending());
+
+            Page<Project> pageTuts = projectRepository.findAll(paging);
+
+            projects = pageTuts.getContent();
+
+            if (projects.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("projects", projects);
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

@@ -39,9 +39,6 @@ public class UserController {
         return userService.getAllSkills();
     }
 
-    @GetMapping("/projects")
-    public List<Project> getAllProjects() {return userService.getAllProjects();}
-
     @PostMapping("/sent/email")
     public void sendEmail(@RequestBody Message message) {
         SimpleMailMessage newMessage = new SimpleMailMessage();
