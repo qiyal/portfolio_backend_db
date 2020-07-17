@@ -15,6 +15,7 @@ public class Project {
     private String type;
     private Date date;
     private String urlImage;
+    private String urlImageSlider;
 
     public int getId() {
         return id;
@@ -30,6 +31,10 @@ public class Project {
 
     public int getView() {
         return view;
+    }
+
+    public String getUrlImageSlider() {
+        return urlImageSlider;
     }
 
     public String getType() {
@@ -49,9 +54,12 @@ public class Project {
         return "Project{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
+                ", text='" + text + '\'' +
+                ", view=" + view +
                 ", type='" + type + '\'' +
                 ", date=" + date +
                 ", urlImage='" + urlImage + '\'' +
+                ", urlImageSlider='" + urlImageSlider + '\'' +
                 '}';
     }
 }
