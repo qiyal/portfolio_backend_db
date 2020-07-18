@@ -16,6 +16,11 @@ public class Project {
     private Date date;
     private String urlImage;
     private String urlImageSlider;
+    private String urlGithub;
+
+    public String getUrlGithub() {
+        return urlGithub;
+    }
 
     public int getId() {
         return id;
@@ -60,6 +65,7 @@ public class Project {
                 ", date=" + date +
                 ", urlImage='" + urlImage + '\'' +
                 ", urlImageSlider='" + urlImageSlider + '\'' +
+                ", urlGithub='" + urlGithub + '\'' +
                 '}';
     }
 }
