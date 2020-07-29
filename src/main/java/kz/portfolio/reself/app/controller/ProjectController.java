@@ -23,6 +23,11 @@ public class ProjectController {
     @Autowired
     ProjectRepository projectRepository;
 
+    @PutMapping("/projects/update")
+    public void updateProjectView(@RequestBody Project project) {
+        projectRepository.save(project);
+    }
+
     @GetMapping("/projects/{id}")
     public Project getProject(@PathVariable("id") int id) {
         return projectRepository.findById(id).get();

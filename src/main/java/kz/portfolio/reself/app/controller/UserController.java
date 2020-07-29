@@ -1,6 +1,5 @@
 package kz.portfolio.reself.app.controller;
 
-import kz.portfolio.reself.app.mail.MyConstants;
 import kz.portfolio.reself.app.model.*;
 import kz.portfolio.reself.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

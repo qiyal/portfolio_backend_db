@@ -1,6 +1,5 @@
 package kz.portfolio.reself.app.service;
 
-import kz.portfolio.reself.app.model.Education;
 import kz.portfolio.reself.app.model.User;
 
 import java.util.List;
